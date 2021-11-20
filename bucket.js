@@ -16,19 +16,20 @@ function setup() {
 	restitution:0.3,
 	friction:0,
 	density:1.2
-
-
+   
 	
 
 	}
-
+	ball = Bodies.circle(50,50,20,ball_options)
+     
 
 	engine = Engine.create();
 	world = engine.world;
-
+    World.add(world,ball)
 	//Create the Bodies Here.
-	Matter.Body.circle(x,y,radius,[ball_options],[maxSides],)
+	Matter.Body.circle(body.position.x=50,y,radius,[ball_options],)
 	Matter.Body.applyForce(body,position,force)
+	
 
 	Engine.run(engine);
   
